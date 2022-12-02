@@ -1,5 +1,5 @@
 import { readFileSync } from "fs";
-import day01 from ".";
+import { day01 } from ".";
 
 describe("DAY 01", () => {
 	const sample = readFileSync("./inputs/01/sample.txt").toString("utf-8");
