@@ -1,8 +1,9 @@
 import { readFileSync } from "fs";
 import { day01 } from ".";
+import { loadSample } from "../utils/file";
 
 describe("DAY 01", () => {
-	const sample = readFileSync("./inputs/01/sample.txt").toString("utf-8");
+	const sample = loadSample(1);
 
 	test("Part 1", () => {
 		expect(day01(sample).part1).toBe(24000);

@@ -37,8 +37,8 @@ const movesOutcomes: number[][] = [
 ];
 
 // Transform a raw stirng into a strategy guide
-export function parseStrategyGuide(input: string): [string, string][] {
-	return input.split("\n").map((line) => line.split(" ") as [string, string]);
+export function parseStrategyGuide(input: string[]): [string, string][] {
+	return input.map((line) => line.split(" ") as [string, string]);
 }
 
 // Compute scores based on round's outcome
@@ -50,14 +50,14 @@ export function playGame(rounds: string[][]) {
 	});
 }
 
-export function part1(input?: string) {
+export function part1(input?: string[]) {
 	if (!input) input = loadInput(2);
 	const guide = parseStrategyGuide(input);
 	const game = playGame(guide);
 	return game.reduce((acc, next) => (acc += next));
 }
 
-export function part2(input?: string) {
+export function part2(input?: string[]) {
 	if (!input) input = loadInput(2);
 	const guide = parseStrategyGuide(input);
 

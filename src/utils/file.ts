@@ -9,7 +9,7 @@ export function loadInput(day: number) {
 }
 
 export function loadFile(day: number, type: string) {
-	return readFileSync(
-		`./inputs/${day.toString().padStart(2, "0")}/${type}.txt`
-	).toString("utf8");
+	return readFileSync(`./inputs/${day.toString().padStart(2, "0")}/${type}.txt`)
+		.toString("utf8")
+		.split("\n");
 }

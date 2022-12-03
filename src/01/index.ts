@@ -1,5 +1,6 @@
 import { readFileSync } from "fs";
 import { config } from "process";
+import { loadInput } from "../utils/file";
 
 /**
  * This solution uses a first for-loop to parse input values and incrementing the current
@@ -7,12 +8,12 @@ import { config } from "process";
  * then it sort them in ascending order to extract the first 3 values
  */
 
-export function day01(data?: string) {
-	if (!data) data = readFileSync("./inputs/01/input.txt").toString("utf-8");
+export function day01(data?: string[]) {
+	if (!data) data = loadInput(1);
 
 	const calories: number[] = [];
 	let elfIndex = 0;
-	data.split("\n").forEach((line) => {
+	data.forEach((line) => {
 		if (!line) {
 			elfIndex++;
 			return;
