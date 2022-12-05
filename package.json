@@ -8,7 +8,9 @@
 	"scripts": {
 		"day:01": "ts-node src/01/run.ts",
 		"day:02": "ts-node src/02/run.ts",
-		"day:02:test": "jest --watch -t \"DAY 02\" --verbose"
+		"day:02:test": "jest --watch -t \"DAY 02\" --verbose",
+		"day:03": "ts-node src/02/run.ts",
+		"day:03:test": "jest --watch -t \"DAY 03\" --verbose"
 	},
 	"devDependencies": {
 		"@types/jest": "^29.2.3",
