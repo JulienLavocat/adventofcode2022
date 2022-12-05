@@ -8,9 +8,11 @@
 	"scripts": {
 		"day:01": "ts-node src/01/run.ts",
 		"day:02": "ts-node src/02/run.ts",
-		"day:02:test": "jest --watch -t \"DAY 02\" --verbose",
-		"day:03": "ts-node src/02/run.ts",
-		"day:03:test": "jest --watch -t \"DAY 03\" --verbose"
+		"day:02:test": "jest --watch --testPathPattern 02.spec.ts --verbose",
+		"day:03": "ts-node src/03/run.ts",
+		"day:03:test": "jest --watch --testPathPattern 03.spec.ts --verbose",
+		"day:04": "ts-node src/04/run.ts",
+		"day:04:test": "jest --watch --testPathPattern 04.spec.ts --verbose"
 	},
 	"devDependencies": {
 		"@types/jest": "^29.2.3",
